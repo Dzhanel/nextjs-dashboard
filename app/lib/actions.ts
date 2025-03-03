@@ -24,6 +24,7 @@ export async function authenticate(
           return "Something went wrong.";
       }
     }
+    redirect(formData.get("redirectTo")?.toString() || "/");
   }
 }
 
